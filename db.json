@@ -2,26 +2,72 @@
   "messages": [
     {
       "role": "user",
-      "content": "how is the weather?",
-      "id": "9b6e5ffd-56da-4042-a503-d292cd79d093",
-      "createdAt": "2024-11-05T19:34:16.767Z"
+      "content": "What is the weather",
+      "id": "77a81d42-1047-4c1e-b9ed-d79df62763f2",
+      "createdAt": "2025-01-29T09:52:34.312Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Could you please specify the location for which you would like to know the weather?",
+      "refusal": null,
+      "id": "f06c74cf-83fe-40b0-92a9-249336895a4d",
+      "createdAt": "2025-01-29T09:52:36.169Z"
+    },
+    {
+      "role": "user",
+      "content": "Dunedin",
+      "id": "825c61fb-82bb-442a-ad64-77cac8a616c3",
+      "createdAt": "2025-01-29T09:52:45.602Z"
     },
     {
       "role": "assistant",
       "content": null,
       "tool_calls": [
         {
-          "id": "call_Pd2L6OWnviQmRf7RicWtvE6Y",
+          "id": "call_1VZK2eZflpPN3iDH3YCSun4z",
           "type": "function",
           "function": {
-            "name": "get_stuff",
-            "arguments": "{\"reasoning\":\"To provide accurate weather information.\"}"
+            "name": "get_weather",
+            "arguments": "{\"reasoning\":\"To provide the current weather information for Dunedin.\"}"
           }
         }
       ],
       "refusal": null,
-      "id": "7c3e8fdd-f7f8-4103-9ac4-a361671aca41",
-      "createdAt": "2024-11-05T19:34:17.996Z"
+      "id": "1e19931a-d434-45e3-af52-a761ccb42437",
+      "createdAt": "2025-01-29T09:52:47.309Z"
+    },
+    {
+      "role": "tool",
+      "content": "hot, 30 deg, no wind",
+      "tool_call_id": "call_1VZK2eZflpPN3iDH3YCSun4z",
+      "id": "1828bbc7-c4bf-4320-9cc7-d18cdca606ac",
+      "createdAt": "2025-01-29T09:52:47.310Z"
+    },
+    {
+      "role": "user",
+      "content": "how hot is 30 deg",
+      "id": "44286051-6fcd-446b-97ba-99dec79af7e0",
+      "createdAt": "2025-01-29T09:53:10.912Z"
+    },
+    {
+      "role": "assistant",
+      "content": "30 degrees Celsius is equivalent to 86 degrees Fahrenheit. It's considered quite warm or hot, depending on the context.",
+      "refusal": null,
+      "id": "afa15a83-910a-45ff-a044-f7d43dda7a49",
+      "createdAt": "2025-01-29T09:53:13.046Z"
+    },
+    {
+      "role": "user",
+      "content": "is the temp 30 presently?",
+      "id": "e2126643-31ef-4488-9833-843052c4c5f9",
+      "createdAt": "2025-01-29T09:53:30.914Z"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, the current temperature in Dunedin is 30 degrees Celsius.",
+      "refusal": null,
+      "id": "9e43ba7d-9874-43ba-b8c8-27a75b1d9ee3",
+      "createdAt": "2025-01-29T09:53:32.174Z"
     }
   ]
 }
