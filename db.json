@@ -23,6 +23,32 @@
       "content": "Nice to meet you, Scott! How can I assist you today?",
       "id": "70a9b0ae-a6ec-4523-a4dd-81ce5c27e080",
       "createdAt": "2024-11-05T17:40:29.361Z"
+    },
+    {
+      "role": "user",
+      "content": "What is the weather",
+      "id": "086e42fd-a2bc-46ed-8c1f-d4ffea753c05",
+      "createdAt": "2025-01-29T09:06:51.002Z"
+    },
+    {
+      "role": "assistant",
+      "content": {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_IXeqchuGhsoEoXBVs2ok931X",
+            "type": "function",
+            "function": {
+              "name": "weather",
+              "arguments": "{}"
+            }
+          }
+        ],
+        "refusal": null
+      },
+      "id": "37e3751d-3602-4be9-9741-db9c318487bb",
+      "createdAt": "2025-01-29T09:06:56.959Z"
     }
   ]
 }
