@@ -1,6 +1,7 @@
 import OpenAI from 'openai'
-
-const getWeather = async () => `hot, 30 deg, no wind`
+import { dadJoke, dadJokeDefinition } from './tools/dadJoke'
+import { generateImage, generateImageDefinition } from './tools/generateImage'
+import { reddit, redditDefinition } from './tools/reddit'
 
 export const runTool = async ({
   toolCall,
@@ -14,8 +15,13 @@ export const runTool = async ({
     toolArgs: JSON.parse(toolCall.function.arguments || '{}'),
   }
   switch (toolCall.function.name) {
-    case 'get_weather':
-      return getWeather(input)
+    case dadJokeDefinition.name:
+      return dadJoke(input)
+    case generateImageDefinition.name:
+      return generateImage(input)
+    case redditDefinition.name:
+      return reddit(input)
+
     default:
       throw new Error(`Unknown tool : ${toolCall.function.name}`)
   }
